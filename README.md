@@ -37,20 +37,6 @@ https://serverIP:8001
 
 
 
-Open Port:
-
-``
-bash
-sudo ufw allow 7000
-
-sudo ufw allow 7001
-
-sudo ufw allow 8000
-
-sudo ufw allow 8001
-
-``
-
 
 
 ![1](https://raw.githubusercontent.com/Ptechgithub/linux/main/media/1.jpg)
