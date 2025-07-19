@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Script skuuy
+
 # Check if Docker is installed
 if ! command -v docker &> /dev/null; then
     echo "Docker is not installed."
@@ -31,8 +33,8 @@ install_chromium() {
             -e CUSTOM_USER=$USERNAME \
             -e PASSWORD=$PASSWORD \
             -e CHROME_CLI=https://www.youtube.com/@IR_TECH/ `#optional` \
-            -p 3000:3000 \
-            -p 3001:3001 \
+            -p 7000:3000 \
+            -p 7001:3001 \
             -v /root/chromium/config:/config \
             --shm-size="1gb" \
             --restart unless-stopped \
@@ -41,7 +43,7 @@ install_chromium() {
         echo "Chromium installed successfully."
         IP=$(hostname -I | awk '{print $1}')
         echo " "
-        echo "Use browser with http://$IP:3000"
+        echo "Use browser with http://$IP:7000"
     fi
 }
 
@@ -74,8 +76,8 @@ install_firefox() {
             -e TZ=Etc/UTC \
             -e CUSTOM_USER=$USERNAME \
             -e PASSWORD=$PASSWORD \
-            -p 4000:3000 \
-            -p 4001:3001 \
+            -p 8000:3000 \
+            -p 8001:3001 \
             -v /root/firefox/config:/config \
             --shm-size="4gb" \
             --restart unless-stopped \
@@ -84,7 +86,7 @@ install_firefox() {
         echo "Firefox installed successfully."
         IP=$(hostname -I | awk '{print $1}')
         echo " "
-        echo "Use browser with http://$IP:4000"
+        echo "Use browser with http://$IP:8000"
     fi
 }
 
