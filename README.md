@@ -18,21 +18,28 @@ bash <(curl -fsSL https://raw.githubusercontent.com/deaabie/browser/main/browser
 Open Chromium:
 
 ``
-http://serverIP:3000
+http://serverIP:7000
 ``
 
 ``
-https://serverIP:3001
+https://serverIP:7001
 ``
 
 Open Firefox:
 
 ``
-http://serverIP:4000
+http://serverIP:8000
 ``
 
 ``
-https://serverIP:4001
+https://serverIP:8001
 ``
+Open Port:
 
+``
+sudo ufw allow 7000
+sudo ufw allow 7001
+sudo ufw allow 8000
+sudo ufw allow 8001
+``
 ![1](https://raw.githubusercontent.com/Ptechgithub/linux/main/media/1.jpg)
