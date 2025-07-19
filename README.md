@@ -41,8 +41,11 @@ Open Port:
 
 ``
 sudo ufw allow 7000
+
 sudo ufw allow 7001
+
 sudo ufw allow 8000
+
 sudo ufw allow 8001
 ``
 
